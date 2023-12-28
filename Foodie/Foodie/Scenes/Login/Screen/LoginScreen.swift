@@ -25,7 +25,7 @@ class LoginScreen: UIView {
     lazy var backGroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        view.backgroundColor = .systemIndigo//UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         return view
     }()
     
@@ -56,7 +56,7 @@ class LoginScreen: UIView {
         email.backgroundColor = .white
         email.borderStyle = .roundedRect
         email.keyboardType = .emailAddress
-        
+        email.text = "almenezes912@gmail.com"
         return email
     }()
     
@@ -69,8 +69,8 @@ class LoginScreen: UIView {
         password.backgroundColor = .white
         password.borderStyle = .roundedRect
         password.keyboardType = .emailAddress
-        // password.isSecureTextEntry = true
-        
+        password.isSecureTextEntry = true
+        password.text = "Cross912@"
         return password
     }()
     
@@ -146,6 +146,16 @@ class LoginScreen: UIView {
         super.init(frame: frame)
         addViews()
         setupConstraints()
+        configButtonEnable(false)
+    }
+    
+    
+    public func getEmail()-> String{
+        return self.emailTextField.text ?? ""
+    }
+    
+    public func getPassword()-> String{
+        return self.passwordTextField.text ?? ""
     }
     
     required init?(coder: NSCoder) {

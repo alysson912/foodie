@@ -28,7 +28,7 @@ class MainTabBarController: UITabBarController{
         setViewControllers([homeViewController], animated: true)
         
         tabBar.tintColor = .white
-        tabBar.tintColor = .purple
+        tabBar.tintColor = .red
         tabBar.backgroundColor = .white
         tabBar.alpha = 0.9
         tabBar.isTranslucent = false
