@@ -15,21 +15,19 @@ class MainTabBarController: UITabBarController{
         configNavigationBar()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
-    }
+
 
     
     private func configTabBarController() {
        let homeViewController = UINavigationController(rootViewController: HomeVC())
 //        let warningViewController = UINavigationController(rootViewController: WarningViewController())
-//        let menuViewController = UINavigationController(rootViewController: MenuScreenVC())
-//        
-        setViewControllers([homeViewController], animated: true)
+        let settingsViewController = UINavigationController(rootViewController: MenuVC())
+//
+        setViewControllers([homeViewController, settingsViewController], animated: true)
         
         tabBar.tintColor = .white
         tabBar.tintColor = .red
-        tabBar.backgroundColor = .white
+        tabBar.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         tabBar.alpha = 0.9
         tabBar.isTranslucent = false
         
@@ -38,8 +36,8 @@ class MainTabBarController: UITabBarController{
         items[0].title = "Home"
         items[0].image = UIImage(systemName: "house.fill")
 //
-//        items[1].title = LC.trackingTitleTab.text
-//        items[1].image = UIImage(systemName: LC.trackingIcon.text)
+        items[1].title = "Settings"
+        items[1].image = UIImage(systemName: "gearshape")
 //        
 //        items[2].title = LC.menuTitleTab.text
 //        items[2].image = UIImage(systemName: LC.menuIcon.text)

@@ -21,9 +21,14 @@ class HomeVC: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        screen?.setupTableView(delegate: self, dataSource: self)
+        DispatchQueue.main.async {
+            self.screen?.setupTableView(delegate: self, dataSource: self)
+            self.screen?.tableView.reloadData()
+        }
         
     }
     

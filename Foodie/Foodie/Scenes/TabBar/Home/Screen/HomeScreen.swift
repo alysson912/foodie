@@ -12,18 +12,20 @@ class HomeScreen: UIView {
     lazy var viewBackGround: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .yellow//UIColor(red: 255/255, green: 20/255, blue: 147/255, alpha: 1.0)
+        view.backgroundColor =  UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         return view
     }()
     
-    lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Home"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        return label
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.clipsToBounds = true
+        searchBar.layer.cornerRadius = 20
+        searchBar.placeholder = "Pesquise pelo nome:"
+        return searchBar
     }()
+    
+    
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -43,12 +45,13 @@ class HomeScreen: UIView {
     
     private func addViews(){
         addSubview(viewBackGround)
-        viewBackGround.addSubview(titleLabel)
+        viewBackGround.addSubview(searchBar)
         viewBackGround.addSubview(tableView)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         addViews()
         setupConstrains()
     }
@@ -61,13 +64,15 @@ class HomeScreen: UIView {
         viewBackGround.pin(to: self)
         NSLayoutConstraint.activate( [
             
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
+            searchBar.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
+            searchBar.heightAnchor.constraint(equalToConstant: 46),
             
-            tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 75),
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 15),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.heightAnchor.constraint(equalToConstant: 550)
+            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }
