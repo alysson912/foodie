@@ -9,19 +9,26 @@ import UIKit
 
 class MenuProfileTableViewCellScreen: UIView {
     
+    lazy var backGroundView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        return view
+    }()
+    
     lazy var iconImageView : UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage( named: "k1" )
-        image.contentMode = .scaleAspectFit
+        //image.backgroundColor = .darkGray
+        image.contentMode = .scaleToFill
+        image.layer.cornerRadius = 8
         return image
     }()
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        label.text = "teste"
+        label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         return label
     }()
@@ -31,16 +38,16 @@ class MenuProfileTableViewCellScreen: UIView {
     lazy var arrowImageView : UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage( named: "gsl" )
         image.contentMode = .scaleAspectFit
-        image.backgroundColor = .clear
+        image.tintColor = CustomColor.appGreen
         return image
     }()
     
     private func addViews(){
-        addSubview(iconImageView)
-        addSubview(titleLabel)
-        addSubview(arrowImageView)
+        addSubview(backGroundView)
+        backGroundView.addSubview(iconImageView)
+        backGroundView.addSubview(titleLabel)
+        backGroundView.addSubview(arrowImageView)
        
     }
     
@@ -59,20 +66,21 @@ class MenuProfileTableViewCellScreen: UIView {
     }
     
     private func setupConstraints(){
+        backGroundView.pin(to: self)
         NSLayoutConstraint.activate([
             
             iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
             iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            iconImageView.heightAnchor.constraint(equalToConstant: 65),
-            iconImageView.widthAnchor.constraint(equalToConstant: 65),
+            iconImageView.heightAnchor.constraint(equalToConstant: 45),
+            iconImageView.widthAnchor.constraint(equalToConstant: 45),
 
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             arrowImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             arrowImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
-            arrowImageView.heightAnchor.constraint(equalToConstant: 65),
-            arrowImageView.widthAnchor.constraint(equalToConstant: 65),
+            arrowImageView.heightAnchor.constraint(equalToConstant: 25),
+            arrowImageView.widthAnchor.constraint(equalToConstant: 25),
   
         ])
     }

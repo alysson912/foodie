@@ -8,19 +8,20 @@
 import UIKit
 
 class MenuScreen: UIView {
-
-    lazy var headerView: UIView = {
+    
+    lazy var backGroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .cyan
+        view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         return view
     }()
+
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Settings"
-        label.textColor = .black
+        label.text = "Menu"
+        label.textColor = CustomColor.appPink
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         return label
     }()
@@ -32,7 +33,7 @@ class MenuScreen: UIView {
         tableView.showsVerticalScrollIndicator = false // desativando scrool indicator
         // TO DO: Register
         tableView.register(MenuProfileTableViewCell.self, forCellReuseIdentifier: MenuProfileTableViewCell.identifier)
-        tableView.backgroundColor = .red//UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        tableView.backgroundColor = .clear
         // tableView.transform = CGAffineTransform(scaleX: 1, y: -1) // tableView Contraria/ append item de baixo pra cima
         return tableView
     }()
@@ -45,14 +46,13 @@ class MenuScreen: UIView {
  
     
     private func addViews(){
-        addSubview(headerView)
-        headerView.addSubview(titleLabel)
-        addSubview(tableView)
+        addSubview(backGroundView)
+        backGroundView.addSubview(titleLabel)
+        backGroundView.addSubview(tableView)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .cyan
         addViews()
         setupConstraints()
     }
@@ -62,17 +62,14 @@ class MenuScreen: UIView {
     }
     
     private func setupConstraints(){
+        backGroundView.pin(to: self)
         NSLayoutConstraint.activate([
-        
-            headerView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            headerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            headerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 40),
+
             
-            
+            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)

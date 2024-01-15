@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B4307322B3BC5A500204FB1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4307312B3BC5A500204FB1 /* MainTabBarController.swift */; };
+		4B5B30562B55EF5B00C77C74 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B30552B55EF5B00C77C74 /* UIColor + Extension.swift */; };
 		4B6106392B3E51EF007AE1EE /* MenuProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61062C2B3E51EF007AE1EE /* MenuProfileTableViewCell.swift */; };
 		4B61063A2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61062E2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift */; };
 		4B61063C2B3E51EF007AE1EE /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6106322B3E51EF007AE1EE /* MenuVC.swift */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		04455AB5087F445FEABC8308 /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
 		4B4307312B3BC5A500204FB1 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4B5B30552B55EF5B00C77C74 /* UIColor + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		4B5B30572B55F83A00C77C74 /* HomeDataMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeDataMock.json; sourceTree = "<group>"; };
 		4B61062C2B3E51EF007AE1EE /* MenuProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCell.swift; sourceTree = "<group>"; };
 		4B61062E2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
 		4B6106322B3E51EF007AE1EE /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
@@ -194,6 +197,7 @@
 		4B6106402B3E5439007AE1EE /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				4B5B30572B55F83A00C77C74 /* HomeDataMock.json */,
 				4B6106412B3E5439007AE1EE /* MenuDataMock.json */,
 			);
 			path = JSON;
@@ -285,6 +289,7 @@
 				4BD226F92B3B2F4800CA52C6 /* UIView + Extension.swift */,
 				4BD226FA2B3B2F4800CA52C6 /* UIViewController+Extension.swift */,
 				4BD226FB2B3B2F4800CA52C6 /* String+Extension.swift */,
+				4B5B30552B55EF5B00C77C74 /* UIColor + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -571,6 +576,7 @@
 				4BD226F52B3B2E1800CA52C6 /* HomeScreen.swift in Sources */,
 				4BD7169D2B3DEE5D00510792 /* CardsCollectionViewCellScreen.swift in Sources */,
 				4BD716972B3DEDFA00510792 /* HomeTableViewCellSreen.swift in Sources */,
+				4B5B30562B55EF5B00C77C74 /* UIColor + Extension.swift in Sources */,
 				4BD226E12B3B2C6E00CA52C6 /* HomeVC.swift in Sources */,
 				4BD226FD2B3B2F4800CA52C6 /* UIView + Extension.swift in Sources */,
 				4B61063F2B3E51EF007AE1EE /* MenuData.swift in Sources */,

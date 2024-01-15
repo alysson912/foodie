@@ -40,9 +40,8 @@ class MenuProfileTableViewCell: UITableViewCell {
     }
     
     public func setupCell(data: MenuTitleCellList){
-        screen.iconImageView.image = UIImage(named: data.iconImage ?? "")
+        screen.iconImageView.image = UIImage(systemName: data.iconImage ?? "")
         screen.titleLabel.text = data.titleMenuLabel
-        screen.arrowImageView.image = UIImage(named: data.arrowIconimage ?? "")
-        
+        screen.arrowImageView.image = UIImage(systemName: data.arrowIconimage ?? "")
     }
 }

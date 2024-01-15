@@ -16,7 +16,7 @@ struct MenuData: Codable {
 
 // MARK: - MenuTitleCellList
 struct MenuTitleCellList: Codable {
-    var titleMenuLabel, iconImage, arrowIconimage: String?
+    var titleMenuLabel, iconImage, arrowIconimage, backGroundImage: String?
 }
 
 

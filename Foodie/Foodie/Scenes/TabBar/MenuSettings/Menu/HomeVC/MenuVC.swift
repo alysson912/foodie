@@ -15,7 +15,6 @@ class MenuVC: UIViewController {
     override func loadView() {
         screen = MenuScreen()
         view = screen
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,8 +28,7 @@ class MenuVC: UIViewController {
         viewModel.fetch(.mock)
         
     }
-    
-    
+
 }
 
 extension MenuVC: MenuProfileViewModelDelegate {
@@ -52,7 +50,6 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfSections
-        
     }
 
 
@@ -61,7 +58,6 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MenuProfileTableViewCell.identifier, for: indexPath) as? MenuProfileTableViewCell
         cell?.setupCell(data: viewModel.loadCurrenDatat(indexPath: indexPath))
-        
         return cell ?? UITableViewCell()
     }
     
