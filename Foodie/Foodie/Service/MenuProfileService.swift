@@ -6,44 +6,28 @@
 //
 
 import UIKit
-//import Alamofire
 
-protocol MenuProfileServiceDelegate: GenericService {
-    func getMenuFromJson(completion: @escaping completion <MenuProfileGroup?>)
-  //  func getMenu(completion: @escaping completion <MenuProfileGroup?>)
+protocol HomeServiceDelegate: GenericService {
+    func getHomeFromJson(completion: completion<MenuData?>)
+   // func getHome(completion: @escaping completion<NFTData?>)
 }
 
-class MenuProfileService: MenuProfileServiceDelegate {
-    
-//    func getMenu(completion: @escaping completion <MenuProfileGroup?>){
-//        let url: String = "https://run.mocky.io/v3/bd7b02f0-73d3-4e8f-a0e3-fd3e402c75a6"
-//        
-//        AF.request(url, method: .get).validate().responseDecodable ( of: MenuProfileGroup.self){ response in
-//            print(#function)
-//            debugPrint(response)
-//            switch response.result {
-//            case .success(let success):
-//                print("success -> \(#function)")
-//                completion(success, nil)
-//                
-//            case .failure(let error):
-//                print("error  -> \(#function)")
-//                completion(nil, Error.errorRequest(error))
-//            }
-//        }
-//        
-//    }
-    
-    func getMenuFromJson(completion: @escaping completion<MenuProfileGroup?>) {
-        if let url = Bundle.main.url(forResource: "menuProfile", withExtension: "json"){
+class MenuProfileService: HomeServiceDelegate {
+    func getHomeFromJson(completion: (MenuData?, Error?) -> Void) {
+        if let url = Bundle.main.url(forResource: "MenuDataMock", withExtension: "json"){ // buscando o local do data
             
             do {
-                let data = try Data(contentsOf: url)
-                let menu: MenuProfileGroup = try JSONDecoder().decode(MenuProfileGroup.self, from: data)
-                completion(menu, nil)
+                 let data = try Data(contentsOf: url) // passando a rota do json, transforma o json em binario para depois trasformar em um objeto
+                let homeData: MenuData = try JSONDecoder().decode(MenuData.self, from: data)
+                completion(homeData, nil)
+                
             } catch  {
-                completion(nil, Error.fileDecodingFailed(name: "menuProfile", error))
+                completion(nil, Error.fileDecodingFailed(name: "HomeData", error))
             }
+        } else {
+            completion(nil, Error.fileNoFound(name: "HomeData"))
         }
     }
 }
+
+ 

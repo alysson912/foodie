@@ -10,12 +10,11 @@
 		4B4307322B3BC5A500204FB1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4307312B3BC5A500204FB1 /* MainTabBarController.swift */; };
 		4B6106392B3E51EF007AE1EE /* MenuProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61062C2B3E51EF007AE1EE /* MenuProfileTableViewCell.swift */; };
 		4B61063A2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61062E2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift */; };
-		4B61063B2B3E51EF007AE1EE /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6106302B3E51EF007AE1EE /* SectionView.swift */; };
 		4B61063C2B3E51EF007AE1EE /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6106322B3E51EF007AE1EE /* MenuVC.swift */; };
 		4B61063D2B3E51EF007AE1EE /* MenuProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6106342B3E51EF007AE1EE /* MenuProfileViewModel.swift */; };
 		4B61063E2B3E51EF007AE1EE /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6106362B3E51EF007AE1EE /* MenuScreen.swift */; };
-		4B61063F2B3E51EF007AE1EE /* MenuProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6106382B3E51EF007AE1EE /* MenuProfile.swift */; };
-		4B6106422B3E5439007AE1EE /* menuProfile.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B6106412B3E5439007AE1EE /* menuProfile.json */; };
+		4B61063F2B3E51EF007AE1EE /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6106382B3E51EF007AE1EE /* MenuData.swift */; };
+		4B6106422B3E5439007AE1EE /* MenuDataMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B6106412B3E5439007AE1EE /* MenuDataMock.json */; };
 		4BD226DD2B3B2C6E00CA52C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD226DC2B3B2C6E00CA52C6 /* AppDelegate.swift */; };
 		4BD226DF2B3B2C6E00CA52C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD226DE2B3B2C6E00CA52C6 /* SceneDelegate.swift */; };
 		4BD226E12B3B2C6E00CA52C6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD226E02B3B2C6E00CA52C6 /* HomeVC.swift */; };
@@ -48,12 +47,11 @@
 		4B4307312B3BC5A500204FB1 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4B61062C2B3E51EF007AE1EE /* MenuProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCell.swift; sourceTree = "<group>"; };
 		4B61062E2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
-		4B6106302B3E51EF007AE1EE /* SectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		4B6106322B3E51EF007AE1EE /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		4B6106342B3E51EF007AE1EE /* MenuProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuProfileViewModel.swift; sourceTree = "<group>"; };
 		4B6106362B3E51EF007AE1EE /* MenuScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
-		4B6106382B3E51EF007AE1EE /* MenuProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuProfile.swift; sourceTree = "<group>"; };
-		4B6106412B3E5439007AE1EE /* menuProfile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menuProfile.json; sourceTree = "<group>"; };
+		4B6106382B3E51EF007AE1EE /* MenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
+		4B6106412B3E5439007AE1EE /* MenuDataMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MenuDataMock.json; sourceTree = "<group>"; };
 		4BBEAA592B3BA14700297587 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD226D92B3B2C6E00CA52C6 /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD226DC2B3B2C6E00CA52C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				4B61062B2B3E51EF007AE1EE /* Cells */,
-				4B61062F2B3E51EF007AE1EE /* Section */,
 				4B6106312B3E51EF007AE1EE /* HomeVC */,
 				4B6106332B3E51EF007AE1EE /* HomeViewModel */,
 				4B6106352B3E51EF007AE1EE /* HomeScreen */,
@@ -160,14 +157,6 @@
 				4B61062E2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift */,
 			);
 			path = screen;
-			sourceTree = "<group>";
-		};
-		4B61062F2B3E51EF007AE1EE /* Section */ = {
-			isa = PBXGroup;
-			children = (
-				4B6106302B3E51EF007AE1EE /* SectionView.swift */,
-			);
-			path = Section;
 			sourceTree = "<group>";
 		};
 		4B6106312B3E51EF007AE1EE /* HomeVC */ = {
@@ -197,7 +186,7 @@
 		4B6106372B3E51EF007AE1EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4B6106382B3E51EF007AE1EE /* MenuProfile.swift */,
+				4B6106382B3E51EF007AE1EE /* MenuData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,7 +194,7 @@
 		4B6106402B3E5439007AE1EE /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				4B6106412B3E5439007AE1EE /* menuProfile.json */,
+				4B6106412B3E5439007AE1EE /* MenuDataMock.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -524,7 +513,7 @@
 			files = (
 				4BD226E92B3B2C6F00CA52C6 /* LaunchScreen.storyboard in Resources */,
 				4BD226E62B3B2C6F00CA52C6 /* Assets.xcassets in Resources */,
-				4B6106422B3E5439007AE1EE /* menuProfile.json in Resources */,
+				4B6106422B3E5439007AE1EE /* MenuDataMock.json in Resources */,
 				4BD227252B3B7DE700CA52C6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,14 +573,13 @@
 				4BD716972B3DEDFA00510792 /* HomeTableViewCellSreen.swift in Sources */,
 				4BD226E12B3B2C6E00CA52C6 /* HomeVC.swift in Sources */,
 				4BD226FD2B3B2F4800CA52C6 /* UIView + Extension.swift in Sources */,
-				4B61063F2B3E51EF007AE1EE /* MenuProfile.swift in Sources */,
+				4B61063F2B3E51EF007AE1EE /* MenuData.swift in Sources */,
 				4BD716912B3DED2D00510792 /* HomeModel.swift in Sources */,
 				4BD226DD2B3B2C6E00CA52C6 /* AppDelegate.swift in Sources */,
 				4B61063A2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift in Sources */,
 				4BD227222B3B7C1000CA52C6 /* Alert.swift in Sources */,
 				4BD227162B3B33E700CA52C6 /* LoginVC.swift in Sources */,
 				4B6106392B3E51EF007AE1EE /* MenuProfileTableViewCell.swift in Sources */,
-				4B61063B2B3E51EF007AE1EE /* SectionView.swift in Sources */,
 				4BD226FE2B3B2F4800CA52C6 /* UIViewController+Extension.swift in Sources */,
 				4BD716BE2B3E4EE700510792 /* MenuProfileService.swift in Sources */,
 				4BD2271E2B3B379A00CA52C6 /* RegisterScreen.swift in Sources */,

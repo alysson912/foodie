@@ -33,16 +33,16 @@ class MenuProfileTableViewCell: UITableViewCell {
     }
     
     private func setupConstraints(){
+        screen.pin(to: contentView)
         NSLayoutConstraint.activate([
             
-            screen.topAnchor.constraint(equalTo: topAnchor),
-            screen.leadingAnchor.constraint(equalTo: leadingAnchor),
-            screen.trailingAnchor.constraint(equalTo: trailingAnchor),
-            screen.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
     
-    public func setupCell(title: String){
-        screen.titleLabel.text = title
+    public func setupCell(data: MenuTitleCellList){
+        screen.iconImageView.image = UIImage(named: data.iconImage ?? "")
+        screen.titleLabel.text = data.titleMenuLabel
+        screen.arrowImageView.image = UIImage(named: data.arrowIconimage ?? "")
+        
     }
 }

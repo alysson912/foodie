@@ -1,0 +1,26 @@
+{
+    "totalValue": 3566.10,
+    "menuTitleCellList": [
+        {
+            "titleMenuLabel": "Settings",
+            "iconImage": "gsl",
+            "arrowIconimage": "l2"
+        },
+        {
+            "titleMenuLabel": "Perfil",
+            "iconImage": "k1",
+            "arrowIconimage": "gsl"
+        },
+        {
+            "titleMenuLabel": "Notificações",
+            "iconImage": "l2",
+            "arrowIconimage": "gsl"
+        },
+        {
+            "titleMenuLabel": "LogOut",
+            "iconImage": "k1",
+            "arrowIconimage": "l2"
+        }
+    ]
+    
+}

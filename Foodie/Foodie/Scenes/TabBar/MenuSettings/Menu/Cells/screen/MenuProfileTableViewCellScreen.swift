@@ -9,29 +9,43 @@ import UIKit
 
 class MenuProfileTableViewCellScreen: UIView {
     
+    lazy var iconImageView : UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage( named: "k1" )
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
+    
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.text = "teste"
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         return label
     }()
     
-    lazy var lineView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .lightGray
-        return view
-    }()
 
+    
+    lazy var arrowImageView : UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage( named: "gsl" )
+        image.contentMode = .scaleAspectFit
+        image.backgroundColor = .clear
+        return image
+    }()
+    
     private func addViews(){
+        addSubview(iconImageView)
         addSubview(titleLabel)
-        addSubview(lineView)
+        addSubview(arrowImageView)
+       
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .lightGray.withAlphaComponent(1)
         addViews()
         setupConstraints()
     }
@@ -40,19 +54,27 @@ class MenuProfileTableViewCellScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func setupSection(description: String){
+        titleLabel.text = description
+    }
+    
     private func setupConstraints(){
         NSLayoutConstraint.activate([
-        
+            
+            iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
+            iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            iconImageView.heightAnchor.constraint(equalToConstant: 65),
+            iconImageView.widthAnchor.constraint(equalToConstant: 65),
+
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            lineView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            lineView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            lineView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            lineView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            lineView.heightAnchor.constraint(equalToConstant: 0.8),
-            
+            arrowImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            arrowImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
+            arrowImageView.heightAnchor.constraint(equalToConstant: 65),
+            arrowImageView.widthAnchor.constraint(equalToConstant: 65),
+  
         ])
     }
+ 
 }
