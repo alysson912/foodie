@@ -7,21 +7,21 @@
 
 import UIKit
 
+protocol HomeViewModelDelegate: AnyObject {
+    func sucess()
+    func error()
+}
+
 class HomeViewModel {
     
     
-    private var dataImage: [HomeModel] = [
-        
-        HomeModel(image: "k1"),
-        HomeModel(image: "l2"),
-        HomeModel(image: "gsl"),
-    ]
+ 
     
-    public func loadCurrentFilterNft(indexPath: IndexPath) -> HomeModel {
-        return dataImage[indexPath.row]
-    }
+//    public func loadCurrentFilterNft(indexPath: IndexPath) -> HomeModel {
+//        return dataImage[indexPath.row]
+//    }
     
-    public var numberOfRowsInSection: Int {
-        return 5
-    }
+//    public var numberOfRowsInSection: Int {
+//        return 5
+//    }
 }

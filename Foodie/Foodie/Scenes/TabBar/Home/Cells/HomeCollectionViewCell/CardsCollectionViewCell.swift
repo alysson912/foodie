@@ -36,7 +36,7 @@ class CardsCollectionViewCell: UICollectionViewCell {
         ])
     }
     
-     func setupCell(data: HomeModel){
-        screen.genericImageView.image = UIImage(named: data.image ?? "")
-    }
+//     func setupCell(data: HomeModel){
+//        screen.genericImageView.image = UIImage(named: data.image ?? "")
+//    }
 }

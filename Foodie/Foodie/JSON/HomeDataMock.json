@@ -1,30 +1,52 @@
+
 {
     "totalValue": 3566.10,
-    "menuTitleCellList": [
+    "listProducts": [
         {
-            "titleMenuLabel": "Settings",
-            "iconImage": "gear",
-            "arrowIconimage": "arrow.forward",
-            "backGroundImage": ".green"
+            "id" : "01",
+            "image": "k1",
+            "title": "Systema de Pequeno Porte",
+            "brand": "L-Acustic's",
+            "model": "Docs-Series",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "price": "15.90",
+            "productImage": [ "k1", "GSL", "210y"]
+            
+        },
+        
+        {
+            "id" : "02",
+            "image": "GSL",
+            "title": "Systema de Médio Porte",
+            "brand": "d&b AudioTecnik",
+            "model": "SL-Series",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "price": "55.90",
+            "productImage": [ "k1", "GSL", "210y"]
+            
         },
         {
-            "titleMenuLabel": "Perfil",
-            "iconImage": "person.badge.key.fill",
-            "arrowIconimage": "arrow.forward",
-            "backGroundImage": ".red"
+            "id" : "03",
+            "image": "210y",
+            "title": "Systema de Grande Porte",
+            "brand": "LS Audio",
+            "model": "210-Y",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "price": "35.30",
+            "productImage": [ "k1", "GSL", "210y"]
+            
         },
         {
-            "titleMenuLabel": "Notificações",
-            "iconImage": "bell",
-            "arrowIconimage": "arrow.forward",
-            "backGroundImage": ".yellow"
-        },
-        {
-            "titleMenuLabel": "LogOut",
-            "iconImage": "person.fill.badge.minus",
-            "arrowIconimage": "arrow.forward",
-            "backGroundImage": ".cyan"
+            "id" : "04",
+            "image": "GTO_01",
+            "title": "Systema de Grande Porte",
+            "brand": "Outline",
+            "model": "GTO",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "price": "8.90",
+            "productImage": [ "k1", "GSL", "210y"]
+            
         }
     ]
-    
 }
+

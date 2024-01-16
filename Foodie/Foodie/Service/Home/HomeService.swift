@@ -1,20 +1,19 @@
 //
-//  MenuProfileService.swift
-//  MenuProfile
+//  HomeService.swift
+//  punchLoudness
 //
-//  Created by ALYSSON DODO on 31/07/23.
+//  Created by Alysson on 29/08/23.
 //
 
 import UIKit
 
 protocol HomeServiceDelegate: GenericService {
     func getHomeFromJson(completion: completion<MenuData?>)
-   // func getHome(completion: @escaping completion<NFTData?>)
 }
 
-class MenuProfileService: HomeServiceDelegate {
+class HomeService {
     func getHomeFromJson(completion: (MenuData?, Error?) -> Void) {
-        if let url = Bundle.main.url(forResource: "MenuDataMock", withExtension: "json"){ // buscando o local do data
+        if let url = Bundle.main.url(forResource: "HomeDataMock", withExtension: "json"){ // buscando o local do data
             
             do {
                  let data = try Data(contentsOf: url) // passando a rota do json, transforma o json em binario para depois trasformar em um objeto
@@ -29,5 +28,3 @@ class MenuProfileService: HomeServiceDelegate {
         }
     }
 }
-
- 

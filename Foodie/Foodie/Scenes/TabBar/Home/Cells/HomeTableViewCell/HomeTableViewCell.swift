@@ -47,7 +47,7 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardsCollectionViewCell.identifier, for: indexPath) as? CardsCollectionViewCell
         
-        cell?.setupCell(data: viewModel.loadCurrentFilterNft(indexPath: indexPath))
+      //  cell?.setupCell(data: viewModel.loadCurrentFilterNft(indexPath: indexPath))
         
         return cell ?? UICollectionViewCell()
     }

@@ -28,7 +28,7 @@ class MenuProfileViewModel {
     public func fetch(_ typeFetch: TypeFetch){
         switch typeFetch {
         case .mock:
-            self.service.getHomeFromJson { success, error in
+            self.service.getMenuFromJson { success, error in
                 if let success {
                     self.data = success
                     self.delegate?.success()

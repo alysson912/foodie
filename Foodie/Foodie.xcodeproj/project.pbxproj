@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B4307322B3BC5A500204FB1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4307312B3BC5A500204FB1 /* MainTabBarController.swift */; };
 		4B5B30562B55EF5B00C77C74 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B30552B55EF5B00C77C74 /* UIColor + Extension.swift */; };
+		4B5B30592B55FCF600C77C74 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B30582B55FCF600C77C74 /* HomeService.swift */; };
 		4B6106392B3E51EF007AE1EE /* MenuProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61062C2B3E51EF007AE1EE /* MenuProfileTableViewCell.swift */; };
 		4B61063A2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61062E2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift */; };
 		4B61063C2B3E51EF007AE1EE /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6106322B3E51EF007AE1EE /* MenuVC.swift */; };
@@ -48,6 +49,7 @@
 		4B4307312B3BC5A500204FB1 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4B5B30552B55EF5B00C77C74 /* UIColor + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		4B5B30572B55F83A00C77C74 /* HomeDataMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeDataMock.json; sourceTree = "<group>"; };
+		4B5B30582B55FCF600C77C74 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		4B61062C2B3E51EF007AE1EE /* MenuProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCell.swift; sourceTree = "<group>"; };
 		4B61062E2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
 		4B6106322B3E51EF007AE1EE /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
@@ -131,6 +133,22 @@
 				4B4307312B3BC5A500204FB1 /* MainTabBarController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4B5B305A2B55FE6A00C77C74 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4B5B30582B55FCF600C77C74 /* HomeService.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4B5B305B2B55FE7000C77C74 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4BD716BC2B3E4EE700510792 /* MenuProfileService.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		4B61062A2B3E51EF007AE1EE /* Menu */ = {
@@ -441,8 +459,9 @@
 		4BD716BB2B3E4EE700510792 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				4BD716BC2B3E4EE700510792 /* MenuProfileService.swift */,
 				4BD716BD2B3E4EE700510792 /* GenericService.swift */,
+				4B5B305B2B55FE7000C77C74 /* Menu */,
+				4B5B305A2B55FE6A00C77C74 /* Home */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -596,6 +615,7 @@
 				4B4307322B3BC5A500204FB1 /* MainTabBarController.swift in Sources */,
 				4BD716BF2B3E4EE700510792 /* GenericService.swift in Sources */,
 				4BD7169A2B3DEE3A00510792 /* CardsCollectionViewCell.swift in Sources */,
+				4B5B30592B55FCF600C77C74 /* HomeService.swift in Sources */,
 				4BD2271F2B3B379A00CA52C6 /* RegisterVC.swift in Sources */,
 				4BD226FC2B3B2F4800CA52C6 /* CACornerMask+Extension.swift in Sources */,
 				4BD7168E2B3DED0300510792 /* HomeViewModel.swift in Sources */,
