@@ -14,14 +14,20 @@ protocol HomeViewModelDelegate: AnyObject {
 
 class HomeViewModel {
     
-    
+    let screen = HomeScreen()
  
     
 //    public func loadCurrentFilterNft(indexPath: IndexPath) -> HomeModel {
 //        return dataImage[indexPath.row]
 //    }
     
-//    public var numberOfRowsInSection: Int {
-//        return 5
-//    }
+  
+    
+    public var numberOfRowsInSection: Int {
+        return 5
+    }
+    
+    public var heightForRowAt: CGFloat {
+        return 250
+    }
 }

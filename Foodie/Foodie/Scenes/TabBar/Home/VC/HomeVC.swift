@@ -5,6 +5,8 @@
 //  Created by Alysson Menezes on 26/12/23.
 //
 
+
+
 import UIKit
 
 class HomeVC: UIViewController {
@@ -26,28 +28,46 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
-            self.screen?.setupTableView(delegate: self, dataSource: self)
-            self.screen?.tableView.reloadData()
+        //    self.screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
+            self.screen?.setupCollectionView(delegate: self, dataSource: self)
+            self.screen?.collectionView.reloadData()
         }
         
     }
+
+}
+
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        15
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardsCollectionViewCell.identifier, for: indexPath) as? CardsCollectionViewCell
+            return cell ?? UICollectionViewCell()
+        }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeBodyCollectionViewCell.identifier, for: indexPath) as? HomeBodyCollectionViewCell
+        return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+          
+        
+        if indexPath.row == 0 {
+            return  CGSize(width: collectionView.frame.width, height: 250)
+        } else {
+            return  CGSize(width: collectionView.frame.width, height: 550)
+        }
+        
+       
+    }
     
     
 }
-extension HomeVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3 //viewModel.numberOfRowsInSection
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell
-        
-        return cell ?? UITableViewCell()
-    }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
-    
-}
+
+

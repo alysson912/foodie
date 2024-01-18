@@ -16,37 +16,32 @@ class HomeScreen: UIView {
         return view
     }()
     
-    lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
-        searchBar.clipsToBounds = true
-        searchBar.layer.cornerRadius = 20
-        searchBar.placeholder = "Pesquise pelo nome:"
-        return searchBar
-    }()
-    
-    
-    
-    lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.separatorStyle = .none // retirando linhas
-        tableView.showsVerticalScrollIndicator = false // desativando scrool indicator
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        collectionView.delaysContentTouches = false
         // TO DO: Register
-         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
-        tableView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
-        return tableView
+        collectionView.register(HomeBodyCollectionViewCell.self, forCellWithReuseIdentifier: HomeBodyCollectionViewCell.identifier)
+        collectionView.register(CardsCollectionViewCell.self, forCellWithReuseIdentifier: CardsCollectionViewCell.identifier)
+        let layout = UICollectionViewFlowLayout.init()
+        // layout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)// a collection nasce com a cell contendo a distancias respectivas
+      //  layout.scrollDirection = .vertical
+        collectionView.setCollectionViewLayout(layout, animated: false)
+        
+        return collectionView
     }()
     
-    public func setupTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){
-        tableView.delegate = delegate
-        tableView.dataSource = dataSource
+    public func setupCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
     }
     
     private func addViews(){
         addSubview(viewBackGround)
-        viewBackGround.addSubview(searchBar)
-        viewBackGround.addSubview(tableView)
+        viewBackGround.addSubview(collectionView)
+        
     }
     
     override init(frame: CGRect) {
@@ -64,15 +59,13 @@ class HomeScreen: UIView {
         viewBackGround.pin(to: self)
         NSLayoutConstraint.activate( [
             
-            searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
-            searchBar.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
-            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
-            searchBar.heightAnchor.constraint(equalToConstant: 46),
+        
             
-            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 15),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            
         ])
     }
 }

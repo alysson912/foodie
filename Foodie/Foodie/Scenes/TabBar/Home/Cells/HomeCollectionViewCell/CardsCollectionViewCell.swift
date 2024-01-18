@@ -24,6 +24,7 @@ class CardsCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         addViews()
         setupConstraints()
+        screen.setupCollectionView(delegate: self, dataSource: self)
     }
     
     required init?(coder: NSCoder) {
@@ -39,4 +40,20 @@ class CardsCollectionViewCell: UICollectionViewCell {
 //     func setupCell(data: HomeModel){
 //        screen.genericImageView.image = UIImage(named: data.image ?? "")
 //    }
+}
+extension CardsCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OffersCardCollectionViewCell.identifier, for: indexPath) as? OffersCardCollectionViewCell
+        
+        return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
 }

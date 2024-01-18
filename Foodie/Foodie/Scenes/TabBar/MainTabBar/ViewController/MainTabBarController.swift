@@ -15,15 +15,16 @@ class MainTabBarController: UITabBarController{
         configNavigationBar()
     }
     
-
-
+    
+    
     
     private func configTabBarController() {
-       let homeViewController = UINavigationController(rootViewController: HomeVC())
-//        let warningViewController = UINavigationController(rootViewController: WarningViewController())
-        let settingsViewController = UINavigationController(rootViewController: MenuVC())
-//
-        setViewControllers([homeViewController, settingsViewController], animated: true)
+        let homeVC = UINavigationController(rootViewController: HomeVC())
+        let searchVC = UINavigationController(rootViewController: SearchVC())
+        let settingsVC = UINavigationController(rootViewController: MenuVC())
+        let requestVC = UINavigationController(rootViewController: RequestVC())
+        
+        setViewControllers([homeVC,searchVC, requestVC, settingsVC], animated: true)
         
         tabBar.tintColor = .white
         tabBar.tintColor = .red
@@ -35,12 +36,20 @@ class MainTabBarController: UITabBarController{
         
         items[0].title = "Home"
         items[0].image = UIImage(systemName: "house.fill")
-//
-        items[1].title = "Settings"
-        items[1].image = UIImage(systemName: "gearshape")
-//        
-//        items[2].title = LC.menuTitleTab.text
-//        items[2].image = UIImage(systemName: LC.menuIcon.text)
+        
+        items[1].title = "Buscar"
+        items[1].image = UIImage(systemName: "magnifyingglass")
+        
+        items[2].title = "Pedidos"
+        items[2].image = UIImage(systemName: "list.bullet")
+        
+        items[3].title = "Settings"
+        items[3].image = UIImage(systemName: "gearshape")
+        
+       
+        //
+        //        items[2].title = LC.menuTitleTab.text
+        //        items[2].image = UIImage(systemName: LC.menuIcon.text)
     }
     
     private func configNavigationBar(){
