@@ -20,6 +20,12 @@
             "backGroundImage": ".yellow"
         },
         {
+            "titleMenuLabel": "Admin",
+            "iconImage": "person.fill.badge.minus",
+            "arrowIconimage": "arrow.forward",
+            "backGroundImage": ".cyan"
+        },
+        {
             "titleMenuLabel": "LogOut",
             "iconImage": "person.fill.badge.minus",
             "arrowIconimage": "arrow.forward",

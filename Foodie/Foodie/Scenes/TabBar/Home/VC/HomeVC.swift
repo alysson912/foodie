@@ -44,25 +44,25 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.row == 0 {
+        switch indexPath.item {
+        case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardsCollectionViewCell.identifier, for: indexPath) as? CardsCollectionViewCell
+            return cell ?? UICollectionViewCell()
+            
+        case 1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeBodyCollectionViewCell.identifier, for: indexPath) as? HomeBodyCollectionViewCell
+            return cell ?? UICollectionViewCell()
+            
+        default:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeBodyCollectionViewCell.identifier, for: indexPath) as? HomeBodyCollectionViewCell
             return cell ?? UICollectionViewCell()
         }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeBodyCollectionViewCell.identifier, for: indexPath) as? HomeBodyCollectionViewCell
-        return cell ?? UICollectionViewCell()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-          
-        
-        if indexPath.row == 0 {
-            return  CGSize(width: collectionView.frame.width, height: 250)
-        } else {
-            return  CGSize(width: collectionView.frame.width, height: 550)
-        }
-        
-       
+        return viewModel.sizeForItemAt(indexPath: indexPath, frame: collectionView.frame)
     }
     
     
