@@ -16,8 +16,18 @@ class FilterCollectionViewCellScreen: UIView {
         return view
     }()
     
+    lazy var genericLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Filtro"
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 40, weight: .bold)
+        return label
+    }()
+    
     private func addViews(){
         addSubview(backGroundView)
+        backGroundView.addSubview(genericLabel)
     }
 
     override init(frame: CGRect) {
@@ -31,7 +41,11 @@ class FilterCollectionViewCellScreen: UIView {
     }
     private func setupConstraints(){
         backGroundView.pin(to: self)
-        NSLayoutConstraint.activate([ ])
+        NSLayoutConstraint.activate([
+        
+            genericLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            genericLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+        ])
     }
     
 }

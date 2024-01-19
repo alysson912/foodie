@@ -18,6 +18,7 @@ class HomeBodyCollectionViewCellScreen: UIView {
         collectionView.delaysContentTouches = false
         // TO DO: Register
         collectionView.register(FilterCollectionViewCell.self, forCellWithReuseIdentifier: FilterCollectionViewCell.identifier)
+          
         let layout = UICollectionViewFlowLayout.init()
         // layout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)// a collection nasce com a cell contendo a distancias respectivas
         layout.scrollDirection = .horizontal

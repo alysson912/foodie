@@ -39,7 +39,7 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -53,12 +53,16 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeBodyCollectionViewCell.identifier, for: indexPath) as? HomeBodyCollectionViewCell
             return cell ?? UICollectionViewCell()
             
+        case 2:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardBodyCollectionViewCell.identifier, for: indexPath) as? CardBodyCollectionViewCell
+            return cell ?? UICollectionViewCell()
+            
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeBodyCollectionViewCell.identifier, for: indexPath) as? HomeBodyCollectionViewCell
             return cell ?? UICollectionViewCell()
+         
         }
-        
-        
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

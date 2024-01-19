@@ -25,6 +25,8 @@ class HomeScreen: UIView {
         // TO DO: Register
         collectionView.register(HomeBodyCollectionViewCell.self, forCellWithReuseIdentifier: HomeBodyCollectionViewCell.identifier)
         collectionView.register(CardsCollectionViewCell.self, forCellWithReuseIdentifier: CardsCollectionViewCell.identifier)
+        collectionView.register(CardBodyCollectionViewCell.self, forCellWithReuseIdentifier: CardBodyCollectionViewCell.identifier)
+        
         let layout = UICollectionViewFlowLayout.init()
         // layout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)// a collection nasce com a cell contendo a distancias respectivas
       //  layout.scrollDirection = .vertical
@@ -57,10 +59,7 @@ class HomeScreen: UIView {
     
     private func setupConstrains() {
         viewBackGround.pin(to: self)
-        NSLayoutConstraint.activate( [
-            
-        
-            
+        NSLayoutConstraint.activate( [ 
             collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),

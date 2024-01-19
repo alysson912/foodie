@@ -16,9 +16,19 @@ class OffersCardCollectionViewCellScreen: UIView {
         return view
     }()
     
+    lazy var genericLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Ofertas"
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 40, weight: .bold)
+        return label
+    }()
+    
     
     private func addViews(){
         addSubview(backGroundView)
+        backGroundView.addSubview(genericLabel)
        
     }
     override init(frame: CGRect) {
@@ -35,6 +45,8 @@ class OffersCardCollectionViewCellScreen: UIView {
         backGroundView.pin(to: self)
       
         NSLayoutConstraint.activate([
+            genericLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            genericLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
     }
 }

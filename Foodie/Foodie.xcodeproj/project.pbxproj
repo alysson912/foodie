@@ -19,6 +19,10 @@
 		4B6106422B3E5439007AE1EE /* MenuDataMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B6106412B3E5439007AE1EE /* MenuDataMock.json */; };
 		4B9684F52B5AD6450078A057 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9684F42B5AD6450078A057 /* FilterCollectionViewCell.swift */; };
 		4B9684F72B5AD65B0078A057 /* FilterCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9684F62B5AD65B0078A057 /* FilterCollectionViewCellScreen.swift */; };
+		4B96850E2B5B21920078A057 /* CardBodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B96850D2B5B21920078A057 /* CardBodyCollectionViewCell.swift */; };
+		4B9685102B5B21B70078A057 /* CardBodyCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B96850F2B5B21B70078A057 /* CardBodyCollectionViewCellScreen.swift */; };
+		4B9685142B5B22420078A057 /* CellOfCardBodyMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9685132B5B22420078A057 /* CellOfCardBodyMainCell.swift */; };
+		4B9685162B5B22590078A057 /* CellOfCardBodyMainCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9685152B5B22590078A057 /* CellOfCardBodyMainCellScreen.swift */; };
 		4BAB42362B5847F60082A3F1 /* HomeBodyCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB42342B5847F60082A3F1 /* HomeBodyCollectionViewCellScreen.swift */; };
 		4BAB42372B5847F60082A3F1 /* HomeBodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB42352B5847F60082A3F1 /* HomeBodyCollectionViewCell.swift */; };
 		4BAB423F2B594F080082A3F1 /* OffersCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB423E2B594F080082A3F1 /* OffersCardCollectionViewCell.swift */; };
@@ -67,6 +71,10 @@
 		4B6106412B3E5439007AE1EE /* MenuDataMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MenuDataMock.json; sourceTree = "<group>"; };
 		4B9684F42B5AD6450078A057 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		4B9684F62B5AD65B0078A057 /* FilterCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		4B96850D2B5B21920078A057 /* CardBodyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBodyCollectionViewCell.swift; sourceTree = "<group>"; };
+		4B96850F2B5B21B70078A057 /* CardBodyCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBodyCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		4B9685132B5B22420078A057 /* CellOfCardBodyMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellOfCardBodyMainCell.swift; sourceTree = "<group>"; };
+		4B9685152B5B22590078A057 /* CellOfCardBodyMainCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellOfCardBodyMainCellScreen.swift; sourceTree = "<group>"; };
 		4BAB42342B5847F60082A3F1 /* HomeBodyCollectionViewCellScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBodyCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		4BAB42352B5847F60082A3F1 /* HomeBodyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBodyCollectionViewCell.swift; sourceTree = "<group>"; };
 		4BAB423E2B594F080082A3F1 /* OffersCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -250,6 +258,75 @@
 			isa = PBXGroup;
 			children = (
 				4B9684F62B5AD65B0078A057 /* FilterCollectionViewCellScreen.swift */,
+			);
+			path = screen;
+			sourceTree = "<group>";
+		};
+		4B9685072B5B20FA0078A057 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				4BAB42382B594CCA0082A3F1 /* OffersCollectionViewCell */,
+				4BD716982B3DEE1000510792 /* CardsCollectionViewCell */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
+		4B9685082B5B210B0078A057 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				4B9684F22B5AD61F0078A057 /* FilterCollectionVIewCell */,
+				4BAB42322B5847F60082A3F1 /* HomeBodyCollectionViewCell */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		4B9685092B5B213D0078A057 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				4B96850A2B5B21480078A057 /* BodyMainCells */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
+		4B96850A2B5B21480078A057 /* BodyMainCells */ = {
+			isa = PBXGroup;
+			children = (
+				4B9685112B5B21ED0078A057 /* CellCardBodyMainCell */,
+				4B96850B2B5B216A0078A057 /* CardBodyMainCell */,
+			);
+			path = BodyMainCells;
+			sourceTree = "<group>";
+		};
+		4B96850B2B5B216A0078A057 /* CardBodyMainCell */ = {
+			isa = PBXGroup;
+			children = (
+				4B96850C2B5B21750078A057 /* screen */,
+				4B96850D2B5B21920078A057 /* CardBodyCollectionViewCell.swift */,
+			);
+			path = CardBodyMainCell;
+			sourceTree = "<group>";
+		};
+		4B96850C2B5B21750078A057 /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				4B96850F2B5B21B70078A057 /* CardBodyCollectionViewCellScreen.swift */,
+			);
+			path = screen;
+			sourceTree = "<group>";
+		};
+		4B9685112B5B21ED0078A057 /* CellCardBodyMainCell */ = {
+			isa = PBXGroup;
+			children = (
+				4B9685122B5B22180078A057 /* screen */,
+				4B9685132B5B22420078A057 /* CellOfCardBodyMainCell.swift */,
+			);
+			path = CellCardBodyMainCell;
+			sourceTree = "<group>";
+		};
+		4B9685122B5B22180078A057 /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				4B9685152B5B22590078A057 /* CellOfCardBodyMainCellScreen.swift */,
 			);
 			path = screen;
 			sourceTree = "<group>";
@@ -486,10 +563,9 @@
 		4BD716852B3DE7CD00510792 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4B9684F22B5AD61F0078A057 /* FilterCollectionVIewCell */,
-				4BAB42322B5847F60082A3F1 /* HomeBodyCollectionViewCell */,
-				4BAB42382B594CCA0082A3F1 /* OffersCollectionViewCell */,
-				4BD716982B3DEE1000510792 /* CardsCollectionViewCell */,
+				4B9685092B5B213D0078A057 /* Body */,
+				4B9685072B5B20FA0078A057 /* Offers */,
+				4B9685082B5B210B0078A057 /* Filter */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -685,12 +761,15 @@
 				4BD7169D2B3DEE5D00510792 /* CardsCollectionViewCellScreen.swift in Sources */,
 				4B5B30562B55EF5B00C77C74 /* UIColor + Extension.swift in Sources */,
 				4BD226E12B3B2C6E00CA52C6 /* HomeVC.swift in Sources */,
+				4B96850E2B5B21920078A057 /* CardBodyCollectionViewCell.swift in Sources */,
 				4BD226FD2B3B2F4800CA52C6 /* UIView + Extension.swift in Sources */,
 				4B61063F2B3E51EF007AE1EE /* MenuData.swift in Sources */,
 				4BD716912B3DED2D00510792 /* HomeModel.swift in Sources */,
 				4BD226DD2B3B2C6E00CA52C6 /* AppDelegate.swift in Sources */,
 				4BAB42422B594FCA0082A3F1 /* OffersCardCollectionViewCellScreen.swift in Sources */,
 				4B9684F52B5AD6450078A057 /* FilterCollectionViewCell.swift in Sources */,
+				4B9685142B5B22420078A057 /* CellOfCardBodyMainCell.swift in Sources */,
+				4B9685162B5B22590078A057 /* CellOfCardBodyMainCellScreen.swift in Sources */,
 				4BAB424E2B595DD20082A3F1 /* RequestScreen.swift in Sources */,
 				4B61063A2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift in Sources */,
 				4BD227222B3B7C1000CA52C6 /* Alert.swift in Sources */,
@@ -702,6 +781,7 @@
 				4BD716BE2B3E4EE700510792 /* MenuProfileService.swift in Sources */,
 				4BD2271E2B3B379A00CA52C6 /* RegisterScreen.swift in Sources */,
 				4BAB423F2B594F080082A3F1 /* OffersCardCollectionViewCell.swift in Sources */,
+				4B9685102B5B21B70078A057 /* CardBodyCollectionViewCellScreen.swift in Sources */,
 				4B61063E2B3E51EF007AE1EE /* MenuScreen.swift in Sources */,
 				4BD226DF2B3B2C6E00CA52C6 /* SceneDelegate.swift in Sources */,
 				4BAB42372B5847F60082A3F1 /* HomeBodyCollectionViewCell.swift in Sources */,
