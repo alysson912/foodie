@@ -22,6 +22,7 @@ class HomeBodyCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         addViews()
         configConstraints()
+        screen.setupConstraints(delegate: self, dataSource: self)
     }
     
     required init?(coder: NSCoder) {
@@ -34,11 +35,9 @@ class HomeBodyCollectionViewCell: UICollectionViewCell {
     
     
    private func configConstraints(){
+       screen.pin(to: contentView)
         NSLayoutConstraint.activate([
-            screen.topAnchor.constraint(equalTo: topAnchor),
-            screen.leadingAnchor.constraint(equalTo: leadingAnchor),
-            screen.trailingAnchor.constraint(equalTo: trailingAnchor),
-            screen.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
         ])
     }
     
@@ -51,4 +50,19 @@ class HomeBodyCollectionViewCell: UICollectionViewCell {
 //        }
 //    }
     
+}
+extension HomeBodyCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.identifier, for: indexPath) as? FilterCollectionViewCell
+        
+        return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return  CGSize(width: frame.width, height: 550)
+    }
 }

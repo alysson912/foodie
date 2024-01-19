@@ -10,18 +10,26 @@ import UIKit
 class HomeBodyCollectionViewCellScreen: UIView {
     
     
-    lazy var filterLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
-        label.clipsToBounds = true
-        label.layer.cornerRadius = 10
-        label.textAlignment = .center
-        return label
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        collectionView.delaysContentTouches = false
+        // TO DO: Register
+        collectionView.register(FilterCollectionViewCell.self, forCellWithReuseIdentifier: FilterCollectionViewCell.identifier)
+        let layout = UICollectionViewFlowLayout.init()
+        // layout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)// a collection nasce com a cell contendo a distancias respectivas
+        layout.scrollDirection = .horizontal
+        collectionView.setCollectionViewLayout(layout, animated: false)
+        
+        return collectionView
     }()
     
+    public func setupConstraints(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource){
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +38,7 @@ class HomeBodyCollectionViewCellScreen: UIView {
     }
     
     func addViews(){
-        addSubview(filterLabel)
+        addSubview(collectionView)
     }
     
     required init?(coder: NSCoder) {
@@ -38,11 +46,8 @@ class HomeBodyCollectionViewCellScreen: UIView {
     }
     
     func configConstraints(){
+        collectionView.pin(to: self)
         NSLayoutConstraint.activate([
-            filterLabel.topAnchor.constraint(equalTo: topAnchor),
-            filterLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            filterLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            filterLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
 }
