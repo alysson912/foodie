@@ -53,6 +53,8 @@
 		4BD7169D2B3DEE5D00510792 /* CardsCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7169C2B3DEE5D00510792 /* CardsCollectionViewCellScreen.swift */; };
 		4BD716BE2B3E4EE700510792 /* MenuProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD716BC2B3E4EE700510792 /* MenuProfileService.swift */; };
 		4BD716BF2B3E4EE700510792 /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD716BD2B3E4EE700510792 /* GenericService.swift */; };
+		4BF6A1D92B6AF398001D6F8D /* StockManagementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF6A1D62B6AF398001D6F8D /* StockManagementVC.swift */; };
+		4BF6A1DA2B6AF398001D6F8D /* StockManagementScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF6A1D82B6AF398001D6F8D /* StockManagementScreen.swift */; };
 		6E25CC3D886ABF349687AD1A /* Pods_Foodie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40110F24B5AE12A45C66993 /* Pods_Foodie.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +110,8 @@
 		4BD7169C2B3DEE5D00510792 /* CardsCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		4BD716BC2B3E4EE700510792 /* MenuProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuProfileService.swift; sourceTree = "<group>"; };
 		4BD716BD2B3E4EE700510792 /* GenericService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
+		4BF6A1D62B6AF398001D6F8D /* StockManagementVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockManagementVC.swift; sourceTree = "<group>"; };
+		4BF6A1D82B6AF398001D6F8D /* StockManagementScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockManagementScreen.swift; sourceTree = "<group>"; };
 		5C629D454B450215E81FC228 /* Pods-Foodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.debug.xcconfig"; path = "Target Support Files/Pods-Foodie/Pods-Foodie.debug.xcconfig"; sourceTree = "<group>"; };
 		E40110F24B5AE12A45C66993 /* Pods_Foodie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -607,6 +611,7 @@
 			isa = PBXGroup;
 			children = (
 				4B61062A2B3E51EF007AE1EE /* Menu */,
+				4BF6A1D22B6AF398001D6F8D /* InventoyManagement */,
 			);
 			path = MenuSettings;
 			sourceTree = "<group>";
@@ -628,6 +633,48 @@
 				4B5B305A2B55FE6A00C77C74 /* Home */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		4BF6A1D22B6AF398001D6F8D /* InventoyManagement */ = {
+			isa = PBXGroup;
+			children = (
+				4BF6A1D32B6AF398001D6F8D /* ViewModel */,
+				4BF6A1D42B6AF398001D6F8D /* Cells */,
+				4BF6A1D52B6AF398001D6F8D /* VC */,
+				4BF6A1D72B6AF398001D6F8D /* screen */,
+			);
+			name = InventoyManagement;
+			path = "../../../../../../../BackFront+/message + ViewCode/MessageViewCode/Alert/InventoyManagement";
+			sourceTree = "<group>";
+		};
+		4BF6A1D32B6AF398001D6F8D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BF6A1D42B6AF398001D6F8D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4BF6A1D52B6AF398001D6F8D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				4BF6A1D62B6AF398001D6F8D /* StockManagementVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		4BF6A1D72B6AF398001D6F8D /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				4BF6A1D82B6AF398001D6F8D /* StockManagementScreen.swift */,
+			);
+			path = screen;
 			sourceTree = "<group>";
 		};
 		652489C1E6CB6B08CE919D7F /* Pods */ = {
@@ -793,10 +840,12 @@
 				4BAB42362B5847F60082A3F1 /* HomeBodyCollectionViewCellScreen.swift in Sources */,
 				4BD7169A2B3DEE3A00510792 /* CardsCollectionViewCell.swift in Sources */,
 				4B5B30592B55FCF600C77C74 /* HomeService.swift in Sources */,
+				4BF6A1D92B6AF398001D6F8D /* StockManagementVC.swift in Sources */,
 				4BD2271F2B3B379A00CA52C6 /* RegisterVC.swift in Sources */,
 				4BD226FC2B3B2F4800CA52C6 /* CACornerMask+Extension.swift in Sources */,
 				4BD7168E2B3DED0300510792 /* HomeViewModel.swift in Sources */,
 				4BD227182B3B33F800CA52C6 /* LoginScreen.swift in Sources */,
+				4BF6A1DA2B6AF398001D6F8D /* StockManagementScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -65,4 +65,15 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
         return viewModel.heightForRowAt
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.item {
+        case 3:
+            let stockManagement = StockManagementVC()
+            navigationController?.pushViewController(stockManagement, animated: true)
+            
+        default:
+            let stockManagement = HomeVC()
+            navigationController?.pushViewController(stockManagement, animated: true)
+        }
+    }
 }
