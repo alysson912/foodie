@@ -17,7 +17,7 @@ class MainTabBarController: UITabBarController{
     
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     private func configTabBarController() {

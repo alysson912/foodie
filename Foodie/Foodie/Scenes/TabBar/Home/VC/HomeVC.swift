@@ -20,7 +20,7 @@ class HomeVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
   
@@ -28,7 +28,8 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
-        //    self.screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
+            self.dismissKeyboard()
+            self.screen?.setupSearchBar(delegate: self)
             self.screen?.setupCollectionView(delegate: self, dataSource: self)
             self.screen?.collectionView.reloadData()
         }
@@ -36,6 +37,20 @@ class HomeVC: UIViewController {
     }
 
 }
+
+extension HomeVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) { // qualquer caractere alterado na search sera disparado
+        
+      //  viewModel.filterSearchText(searchText)
+     //   screen?.tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) { // quando precionar buscar
+        searchBar.resignFirstResponder()
+    }
+}
+
+
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

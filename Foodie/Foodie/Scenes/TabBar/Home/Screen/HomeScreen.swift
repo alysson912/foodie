@@ -16,6 +16,15 @@ class HomeScreen: UIView {
         return view
     }()
     
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.clipsToBounds = true
+        searchBar.layer.cornerRadius = 20
+        searchBar.placeholder = "Pesquise pelo nome:"
+        return searchBar
+    }()
+    
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -32,6 +41,10 @@ class HomeScreen: UIView {
         return collectionView
     }()
     
+     func setupSearchBar(delegate: UISearchBarDelegate){
+        searchBar.delegate = delegate
+    }
+    
     public func setupCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
         collectionView.delegate = delegate
         collectionView.dataSource = dataSource
@@ -39,6 +52,7 @@ class HomeScreen: UIView {
     
     private func addViews(){
         addSubview(viewBackGround)
+        viewBackGround.addSubview(searchBar)
         viewBackGround.addSubview(collectionView)
         
     }
@@ -57,7 +71,12 @@ class HomeScreen: UIView {
     private func setupConstrains() {
         viewBackGround.pin(to: self)
         NSLayoutConstraint.activate( [ 
-            collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            
+            searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            searchBar.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35),
+            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
+            
+            collectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 23),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
