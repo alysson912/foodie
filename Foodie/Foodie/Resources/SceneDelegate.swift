@@ -21,11 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let window = UIWindow(windowScene: windowScene)
                 let vc : MainTabBarController = MainTabBarController()
                 let nav = UINavigationController(rootViewController: vc)
-                let appearance = UINavigationBarAppearance() // config navBarColor
-                appearance.configureWithOpaqueBackground()
-                appearance.backgroundColor = .red
-                nav.navigationBar.standardAppearance = appearance
-                nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
+                //let appearance = UINavigationBarAppearance() // config navBarColor
+                //appearance.configureWithOpaqueBackground()
+                //appearance.backgroundColor = .red
+                //nav.navigationBar.standardAppearance = appearance
+                //nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
                 window.rootViewController = nav
                 window.makeKeyAndVisible()
                 self.window = window

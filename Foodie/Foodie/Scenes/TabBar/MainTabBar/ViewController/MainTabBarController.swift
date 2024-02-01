@@ -16,7 +16,9 @@ class MainTabBarController: UITabBarController{
     }
     
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
     
     private func configTabBarController() {
         let homeVC = UINavigationController(rootViewController: HomeVC())

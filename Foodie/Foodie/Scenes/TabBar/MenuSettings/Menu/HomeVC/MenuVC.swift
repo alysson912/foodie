@@ -18,7 +18,7 @@ class MenuVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidLoad() {
@@ -68,12 +68,14 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.item {
         case 3:
-            let stockManagement = StockManagementVC()
-            navigationController?.pushViewController(stockManagement, animated: true)
+            let vc: StockManagementVC = StockManagementVC()
+            navigationController?.pushViewController(vc, animated: true)
             
         default:
-            let stockManagement = HomeVC()
-            navigationController?.pushViewController(stockManagement, animated: true)
+            let vc = HomeVC()
+            navigationController?.pushViewController(vc, animated: true)
         }
+        
+        
     }
 }

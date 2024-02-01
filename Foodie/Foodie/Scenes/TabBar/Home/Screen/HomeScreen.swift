@@ -60,9 +60,9 @@ class HomeScreen: UIView {
     private func setupConstrains() {
         viewBackGround.pin(to: self)
         NSLayoutConstraint.activate( [ 
-            collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             
         ])
