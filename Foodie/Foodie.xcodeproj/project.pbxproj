@@ -17,6 +17,10 @@
 		4B61063E2B3E51EF007AE1EE /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6106362B3E51EF007AE1EE /* MenuScreen.swift */; };
 		4B61063F2B3E51EF007AE1EE /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6106382B3E51EF007AE1EE /* MenuData.swift */; };
 		4B6106422B3E5439007AE1EE /* MenuDataMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B6106412B3E5439007AE1EE /* MenuDataMock.json */; };
+		4B8DB5CA2B6BBC84006B02ED /* CRUDFormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DB5C92B6BBC84006B02ED /* CRUDFormTableViewCell.swift */; };
+		4B8DB5CC2B6BBCD8006B02ED /* CRUDFormTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DB5CB2B6BBCD8006B02ED /* CRUDFormTableViewCellScreen.swift */; };
+		4B8DB5D12B6BC5B4006B02ED /* SheetFormScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DB5D02B6BC5B4006B02ED /* SheetFormScreen.swift */; };
+		4B8DB5D32B6BC5DD006B02ED /* SheetFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DB5D22B6BC5DD006B02ED /* SheetFormVC.swift */; };
 		4B9684F52B5AD6450078A057 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9684F42B5AD6450078A057 /* FilterCollectionViewCell.swift */; };
 		4B9684F72B5AD65B0078A057 /* FilterCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9684F62B5AD65B0078A057 /* FilterCollectionViewCellScreen.swift */; };
 		4B96850E2B5B21920078A057 /* CardBodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B96850D2B5B21920078A057 /* CardBodyCollectionViewCell.swift */; };
@@ -71,6 +75,10 @@
 		4B6106362B3E51EF007AE1EE /* MenuScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
 		4B6106382B3E51EF007AE1EE /* MenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		4B6106412B3E5439007AE1EE /* MenuDataMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MenuDataMock.json; sourceTree = "<group>"; };
+		4B8DB5C92B6BBC84006B02ED /* CRUDFormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDFormTableViewCell.swift; sourceTree = "<group>"; };
+		4B8DB5CB2B6BBCD8006B02ED /* CRUDFormTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDFormTableViewCellScreen.swift; sourceTree = "<group>"; };
+		4B8DB5D02B6BC5B4006B02ED /* SheetFormScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetFormScreen.swift; sourceTree = "<group>"; };
+		4B8DB5D22B6BC5DD006B02ED /* SheetFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetFormVC.swift; sourceTree = "<group>"; };
 		4B9684F42B5AD6450078A057 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		4B9684F62B5AD65B0078A057 /* FilterCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		4B96850D2B5B21920078A057 /* CardBodyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBodyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -247,6 +255,39 @@
 				4B6106412B3E5439007AE1EE /* MenuDataMock.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		4B8DB5C82B6BBC39006B02ED /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				4B8DB5CB2B6BBCD8006B02ED /* CRUDFormTableViewCellScreen.swift */,
+			);
+			path = screen;
+			sourceTree = "<group>";
+		};
+		4B8DB5CD2B6BC580006B02ED /* SheetForm */ = {
+			isa = PBXGroup;
+			children = (
+				4B8DB5CF2B6BC59D006B02ED /* vc */,
+				4B8DB5CE2B6BC598006B02ED /* screen */,
+			);
+			path = SheetForm;
+			sourceTree = "<group>";
+		};
+		4B8DB5CE2B6BC598006B02ED /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				4B8DB5D02B6BC5B4006B02ED /* SheetFormScreen.swift */,
+			);
+			path = screen;
+			sourceTree = "<group>";
+		};
+		4B8DB5CF2B6BC59D006B02ED /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				4B8DB5D22B6BC5DD006B02ED /* SheetFormVC.swift */,
+			);
+			path = vc;
 			sourceTree = "<group>";
 		};
 		4B9684F22B5AD61F0078A057 /* FilterCollectionVIewCell */ = {
@@ -612,6 +653,7 @@
 			children = (
 				4B61062A2B3E51EF007AE1EE /* Menu */,
 				4BF6A1D22B6AF398001D6F8D /* InventoyManagement */,
+				4B8DB5CD2B6BC580006B02ED /* SheetForm */,
 			);
 			path = MenuSettings;
 			sourceTree = "<group>";
@@ -657,6 +699,8 @@
 		4BF6A1D42B6AF398001D6F8D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4B8DB5C82B6BBC39006B02ED /* screen */,
+				4B8DB5C92B6BBC84006B02ED /* CRUDFormTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -820,8 +864,10 @@
 				4BAB424E2B595DD20082A3F1 /* RequestScreen.swift in Sources */,
 				4B61063A2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift in Sources */,
 				4BD227222B3B7C1000CA52C6 /* Alert.swift in Sources */,
+				4B8DB5D32B6BC5DD006B02ED /* SheetFormVC.swift in Sources */,
 				4BAB42462B5954410082A3F1 /* SearchVC.swift in Sources */,
 				4B9684F72B5AD65B0078A057 /* FilterCollectionViewCellScreen.swift in Sources */,
+				4B8DB5D12B6BC5B4006B02ED /* SheetFormScreen.swift in Sources */,
 				4BD227162B3B33E700CA52C6 /* LoginVC.swift in Sources */,
 				4B6106392B3E51EF007AE1EE /* MenuProfileTableViewCell.swift in Sources */,
 				4BD226FE2B3B2F4800CA52C6 /* UIViewController+Extension.swift in Sources */,
@@ -836,10 +882,12 @@
 				4B61063D2B3E51EF007AE1EE /* MenuProfileViewModel.swift in Sources */,
 				4B4307322B3BC5A500204FB1 /* MainTabBarController.swift in Sources */,
 				4BAB42482B59545E0082A3F1 /* SearchScreen.swift in Sources */,
+				4B8DB5CA2B6BBC84006B02ED /* CRUDFormTableViewCell.swift in Sources */,
 				4BD716BF2B3E4EE700510792 /* GenericService.swift in Sources */,
 				4BAB42362B5847F60082A3F1 /* HomeBodyCollectionViewCellScreen.swift in Sources */,
 				4BD7169A2B3DEE3A00510792 /* CardsCollectionViewCell.swift in Sources */,
 				4B5B30592B55FCF600C77C74 /* HomeService.swift in Sources */,
+				4B8DB5CC2B6BBCD8006B02ED /* CRUDFormTableViewCellScreen.swift in Sources */,
 				4BF6A1D92B6AF398001D6F8D /* StockManagementVC.swift in Sources */,
 				4BD2271F2B3B379A00CA52C6 /* RegisterVC.swift in Sources */,
 				4BD226FC2B3B2F4800CA52C6 /* CACornerMask+Extension.swift in Sources */,

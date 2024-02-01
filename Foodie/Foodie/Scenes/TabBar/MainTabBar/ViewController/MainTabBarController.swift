@@ -28,10 +28,10 @@ class MainTabBarController: UITabBarController{
         
         setViewControllers([homeVC,searchVC, requestVC, settingsVC], animated: true)
         
-        tabBar.tintColor = .white
+       
         tabBar.tintColor = .red
         tabBar.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
-        tabBar.alpha = 0.9
+        tabBar.alpha = 1
         tabBar.isTranslucent = false
         
         guard let items = tabBar.items else {return}
