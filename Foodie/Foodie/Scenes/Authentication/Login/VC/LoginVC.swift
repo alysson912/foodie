@@ -27,6 +27,7 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dismissKeyboard()
         screen?.delegate(delegate: self)
         screen?.configTextFieldDelegate(delegate: self)
         auth = Auth.auth()
