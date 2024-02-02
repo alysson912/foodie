@@ -43,7 +43,6 @@ extension LoginVC: LoginScreenProtocol {
         guard let login = screen else { return }
         
         auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { usuario, error in
-            
             if error != nil {
                 self.alert?.getAlert(titulo: "Atenção", mensagem: "Dados Incorretos,verifique e tente Novamente!!")
             } else {
@@ -69,16 +68,13 @@ extension LoginVC: LoginScreenProtocol {
 extension LoginVC: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("textFieldDidBeginEditing")
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("textFieldDidEndEditing")
         self.screen?.validarTextFields()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("textFieldShouldReturn")
         textField.resignFirstResponder()
         return true
     }

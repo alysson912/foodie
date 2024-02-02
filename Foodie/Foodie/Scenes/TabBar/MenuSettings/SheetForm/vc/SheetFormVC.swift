@@ -14,6 +14,7 @@ class SheetFormVC: UIViewController {
     var screen: SheetFormScreen?
     private var firestore:Firestore?
     private var viewModel = SheetViewModel()
+    
     override func loadView() {
         screen = SheetFormScreen()
         view = screen
@@ -25,7 +26,6 @@ class SheetFormVC: UIViewController {
         screen?.delegate(delegate: self)
         screen?.configTextFieldDelegate(delegate: self)
         firestore = Firestore.firestore()
-        viewModel.fetch(.createCollection)
     }
     
 
@@ -34,15 +34,7 @@ class SheetFormVC: UIViewController {
 }
 
 extension SheetFormVC: UITextFieldDelegate {
-    
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        print("textFieldDidBeginEditing")
-//    }
-//    
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        print("textFieldDidEndEditing")
-//    }
-//
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -53,7 +45,7 @@ extension SheetFormVC: SheetFormScreenProtocol {
     func actionRegisterButton(){
         guard let screen = self.screen else {return}
         
-        
+        viewModel.fetch(.createCollection)
         
         self.dismiss(animated: true, completion: nil)
     }

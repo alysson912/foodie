@@ -7,7 +7,7 @@
 
 import Foundation
 import FirebaseFirestoreInternal
-import FirebaseAuth
+//import FirebaseAuth
 
 protocol StockProfileServiceDelegate: GenericService {
     func createNewColection(completion: @escaping completion<SheetModel?>)
@@ -20,17 +20,17 @@ class StockProfileService: StockProfileServiceDelegate {
     
     func createNewColection(completion: @escaping (SheetModel?, Error?) -> Void)  {
         do {
-            let ref = try  db.collection("Teste").addDocument(data: [
-                
-                "name" : "Amburger",//data.name ?? "",
-                "description" : "Hoper Completo" ,//data.description ?? "",
-                "price" : "20" //String(data.price ?? 0.0),
-                //"image" : data.image ?? ""
+            let ref = try  db.collection("Produtos").addDocument(data: [
+    
+                "first": "Alex",
+                   "middle": "Mathison",
+                   "last": "Turing",
+                   "born": 1912,
+                "Country": "Brasil"
           ])
           print("Document added with ID: \(ref.documentID)")
         } catch {
             completion(nil, Error.fileNoFound(name: "SheetModel"))
-        
         }
     }
     

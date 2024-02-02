@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MenuVC: UIViewController {
     
@@ -23,12 +24,12 @@ class MenuVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    //    screen?.configTableView(delegate: self, dataSource: self)
+        //    screen?.configTableView(delegate: self, dataSource: self)
         viewModel.delegate(delegate: self)
         viewModel.fetch(.mock)
         
     }
-
+    
 }
 
 extension MenuVC: MenuProfileViewModelDelegate {
@@ -51,9 +52,9 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfSections
     }
-
-
-    // reconfigurar tableViewCell 
+    
+    
+    // reconfigurar tableViewCell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MenuProfileTableViewCell.identifier, for: indexPath) as? MenuProfileTableViewCell
@@ -64,16 +65,25 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.heightForRowAt
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.item {
         case 3:
             let vc: InventoryVC = InventoryVC()
             navigationController?.pushViewController(vc, animated: true)
             
+        case 4:
+            let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+                let vc: LoginVC = LoginVC()
+                self.navigationController?.pushViewController(vc, animated: false)
+            } catch let signOutError as NSError {
+                print("Error signing out: %@", signOutError)
+            }
+            
         default:
-            let vc = HomeVC()
-            navigationController?.pushViewController(vc, animated: true)
+            break
         }
         
         
