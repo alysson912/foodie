@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import FirebaseFirestoreInternal
 
 class SheetFormVC: UIViewController {
     
-    private var screen: SheetFormScreen?
-    
+    private let service = StockProfileService()
+    var screen: SheetFormScreen?
+    private var firestore:Firestore?
+    private var viewModel = SheetViewModel()
     override func loadView() {
         screen = SheetFormScreen()
         view = screen
@@ -21,6 +24,8 @@ class SheetFormVC: UIViewController {
         dismissKeyboard()
         screen?.delegate(delegate: self)
         screen?.configTextFieldDelegate(delegate: self)
+        firestore = Firestore.firestore()
+        viewModel.fetch(.createCollection)
     }
     
 
@@ -39,18 +44,17 @@ extension SheetFormVC: UITextFieldDelegate {
 //    }
 //
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("textFieldShouldReturn")
         textField.resignFirstResponder()
         return true
     }
 }
 
 extension SheetFormVC: SheetFormScreenProtocol {
-    func actionRegisterButton() {
-        print("Botando adicionar item clicado!")
-       // self.navigationController?.popViewController(animated: true)
+    func actionRegisterButton(){
+        guard let screen = self.screen else {return}
+        
+        
+        
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
 }

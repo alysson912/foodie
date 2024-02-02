@@ -68,7 +68,7 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.item {
         case 3:
-            let vc: StockManagementVC = StockManagementVC()
+            let vc: InventoryVC = InventoryVC()
             navigationController?.pushViewController(vc, animated: true)
             
         default:

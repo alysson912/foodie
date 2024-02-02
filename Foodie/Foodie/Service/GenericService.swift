@@ -15,7 +15,7 @@ enum Error: Swift.Error {
 
     enum TypeFetch {
         case mock
-      //  case request
+        case createCollection
     }
 
 protocol GenericService: AnyObject {

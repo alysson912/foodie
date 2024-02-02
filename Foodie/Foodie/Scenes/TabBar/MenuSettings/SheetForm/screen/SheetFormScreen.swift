@@ -129,6 +129,26 @@ class SheetFormScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    public func getName() -> String{
+        return self.nameItemTextField.text ?? ""
+    }
+    
+    public func getDescription() -> String {
+        return self.descriptionTextField.text ?? ""
+    }
+    public func getPrice() -> String {
+        return self.priceTextField.text ?? ""
+    }
+    
+    
+   // public func getImage() -> String{
+      //  return self.passwordTextField.text ?? ""
+ //   }
+    
+    
+    
     private func setupConstraints() {
         backGroundView.pin(to: self)
         NSLayoutConstraint.activate([
