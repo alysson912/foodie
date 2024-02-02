@@ -48,6 +48,8 @@ extension SheetFormVC: UITextFieldDelegate {
 extension SheetFormVC: SheetFormScreenProtocol {
     func actionRegisterButton() {
         print("Botando adicionar item clicado!")
+       // self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     

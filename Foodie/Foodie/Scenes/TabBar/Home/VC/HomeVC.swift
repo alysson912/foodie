@@ -23,9 +23,7 @@ class HomeVC: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-  
-    
-    override func viewDidLoad() {
+   override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
             self.dismissKeyboard()

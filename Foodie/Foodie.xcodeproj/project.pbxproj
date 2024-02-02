@@ -191,9 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				4B61062B2B3E51EF007AE1EE /* Cells */,
-				4B6106312B3E51EF007AE1EE /* HomeVC */,
-				4B6106332B3E51EF007AE1EE /* HomeViewModel */,
-				4B6106352B3E51EF007AE1EE /* HomeScreen */,
+				4B6106312B3E51EF007AE1EE /* MenuVC */,
+				4B6106332B3E51EF007AE1EE /* MenuViewModel */,
+				4B6106352B3E51EF007AE1EE /* MenuScreen */,
 				4B6106372B3E51EF007AE1EE /* Model */,
 			);
 			path = Menu;
@@ -216,28 +216,28 @@
 			path = screen;
 			sourceTree = "<group>";
 		};
-		4B6106312B3E51EF007AE1EE /* HomeVC */ = {
+		4B6106312B3E51EF007AE1EE /* MenuVC */ = {
 			isa = PBXGroup;
 			children = (
 				4B6106322B3E51EF007AE1EE /* MenuVC.swift */,
 			);
-			path = HomeVC;
+			path = MenuVC;
 			sourceTree = "<group>";
 		};
-		4B6106332B3E51EF007AE1EE /* HomeViewModel */ = {
+		4B6106332B3E51EF007AE1EE /* MenuViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				4B6106342B3E51EF007AE1EE /* MenuProfileViewModel.swift */,
 			);
-			path = HomeViewModel;
+			path = MenuViewModel;
 			sourceTree = "<group>";
 		};
-		4B6106352B3E51EF007AE1EE /* HomeScreen */ = {
+		4B6106352B3E51EF007AE1EE /* MenuScreen */ = {
 			isa = PBXGroup;
 			children = (
 				4B6106362B3E51EF007AE1EE /* MenuScreen.swift */,
 			);
-			path = HomeScreen;
+			path = MenuScreen;
 			sourceTree = "<group>";
 		};
 		4B6106372B3E51EF007AE1EE /* Model */ = {
