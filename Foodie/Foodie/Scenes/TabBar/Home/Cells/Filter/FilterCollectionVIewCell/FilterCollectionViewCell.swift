@@ -13,6 +13,7 @@ class FilterCollectionViewCell: UICollectionViewCell {
     lazy var screen: FilterCollectionViewCellScreen = {
         let view = FilterCollectionViewCellScreen()
         view.translatesAutoresizingMaskIntoConstraints = false
+        
         return view
     }()
     

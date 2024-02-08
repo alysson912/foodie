@@ -37,7 +37,7 @@ class HomeScreen: UIView {
         collectionView.register(CardBodyCollectionViewCell.self, forCellWithReuseIdentifier: CardBodyCollectionViewCell.identifier)
         let layout = UICollectionViewFlowLayout.init()
         collectionView.setCollectionViewLayout(layout, animated: false)
-        
+        collectionView.layer.cornerRadius = 8.0
         return collectionView
     }()
     

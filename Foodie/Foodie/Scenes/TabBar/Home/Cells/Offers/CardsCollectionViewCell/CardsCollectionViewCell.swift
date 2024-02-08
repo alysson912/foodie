@@ -13,6 +13,7 @@ class CardsCollectionViewCell: UICollectionViewCell {
     lazy var screen: CardsCollectionViewCellScreen = {
         let view = CardsCollectionViewCellScreen()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 8.0 
         return view
     }()
     

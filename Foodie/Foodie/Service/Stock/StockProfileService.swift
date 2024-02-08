@@ -19,14 +19,15 @@ class StockProfileService: StockProfileServiceDelegate {
     var firestore: Firestore?
     
     func createNewColection(completion: @escaping (SheetModel?, Error?) -> Void)  {
+        
+        let category = "Sanduiche"
+        let dataSheet: SheetModel = SheetModel(name: "MacLanche", description: "Descrição do produto", price: 23.90 )
         do {
-            let ref = try  db.collection("Produtos").addDocument(data: [
+            let ref = try  db.collection(category).addDocument(data: [
     
-                "first": "Alex",
-                   "middle": "Mathison",
-                   "last": "Turing",
-                   "born": 1912,
-                "Country": "Brasil"
+                "name": dataSheet.name ?? "",
+                "description": dataSheet.description ?? "",
+                "price": dataSheet.price ?? 0.0,
           ])
           print("Document added with ID: \(ref.documentID)")
         } catch {

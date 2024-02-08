@@ -12,7 +12,7 @@ class FilterCollectionViewCellScreen: UIView {
     lazy var backGroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .yellow
+        view.backgroundColor = .systemOrange
         return view
     }()
     
@@ -20,8 +20,8 @@ class FilterCollectionViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Filtro"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 40, weight: .bold)
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 26, weight: .bold)
         return label
     }()
     

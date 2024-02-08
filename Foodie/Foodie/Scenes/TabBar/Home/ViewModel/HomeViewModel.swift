@@ -30,7 +30,7 @@ class HomeViewModel {
         case 0:
             return CGSize(width: frame.width, height: 200)
         case 1:
-            return CGSize(width: frame.width, height: 100)
+            return CGSize(width: frame.width, height: 45)
         case 2:
             return CGSize(width: frame.width, height: 340)
         default:
