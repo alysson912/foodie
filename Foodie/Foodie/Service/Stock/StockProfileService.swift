@@ -32,7 +32,7 @@ class StockProfileService: StockProfileServiceDelegate {
             let ref = try db.collection("Produtos").addDocument(data: toDictionary())
             
             print("Document added with ID: \(ref.documentID)")
-            print("Document added with ID: \(toDictionary().values)")
+           // print("Document added with ID: \(toDictionary().values)")
         } catch {
             completion(nil, Error.fileNoFound(name: "SheetModel"))
         }
