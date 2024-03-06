@@ -1,14 +1,14 @@
 //
-//  InventoryManagementModel.swift
+//  SheetModel.swift
 //  Foodie
 //
-//  Created by Alysson Menezes on 02/02/24.
+//  Created by Alysson Menezes on 26/02/24.
 //
 
-import UIKit
+import Foundation
 
 struct SheetModel {
-
-    var name, description: String? 
-    var price: Double? 
+    var name, description, price : String
+    
 }
+

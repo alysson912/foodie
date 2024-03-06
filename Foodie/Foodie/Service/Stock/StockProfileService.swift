@@ -6,40 +6,40 @@
 //
 
 import Foundation
+import UIKit
 import FirebaseFirestoreInternal
-//import FirebaseAuth
 
 protocol StockProfileServiceDelegate: GenericService {
-    func createNewColection(completion: @escaping completion<SheetModel?>)
+    // adicionei data: SheetModel para acessar os atributos da SheetModel
+    func createNewColection(data: SheetModel, completion: @escaping completion<SheetModel?>)
 }
 
 class StockProfileService: StockProfileServiceDelegate {
-    
     let db = Firestore.firestore()
     var firestore: Firestore?
     
-    func createNewColection(completion: @escaping (SheetModel?, Error?) -> Void)  {
-        do {
-            let ref = try  db.collection("Produtos").addDocument(data: [
     
-                "first": "Alex",
-                   "middle": "Mathison",
-                   "last": "Turing",
-                   "born": 1912,
-                "Country": "Brasil"
-          ])
-          print("Document added with ID: \(ref.documentID)")
+    func createNewColection( data: SheetModel ,completion: @escaping completion<SheetModel?>) {
+        // pegando objeto e transformando em dicionario
+        func toDictionary() -> [String: Any] {
+                return [
+                    "name": data.name,
+                    "description": data.description,
+                    "price": data.price ]
+            }
+  
+        do {
+            let ref = try db.collection("Produtos").addDocument(data: toDictionary())
+            
+            print("Document added with ID: \(ref.documentID)")
+            print("Document added with ID: \(toDictionary().values)")
         } catch {
             completion(nil, Error.fileNoFound(name: "SheetModel"))
         }
     }
-    
-
-    
-    
-    
-    
-  
-    
-   
 }
+
+
+
+
+

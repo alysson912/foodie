@@ -15,9 +15,10 @@ enum Error: Swift.Error {
 
     enum TypeFetch {
         case mock
-        case createCollection
+        case createNewCollection(data: SheetModel) // adicionei esse parametro para poder acessar os dados 
     }
 
 protocol GenericService: AnyObject {
     typealias completion <T> = (_ result: T, _ failure: Error?) -> Void
+    
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B4307322B3BC5A500204FB1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4307312B3BC5A500204FB1 /* MainTabBarController.swift */; };
+		4B5819412B8D38C4004BF607 /* SheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5819402B8D38C4004BF607 /* SheetModel.swift */; };
 		4B5B30562B55EF5B00C77C74 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B30552B55EF5B00C77C74 /* UIColor + Extension.swift */; };
 		4B5B30592B55FCF600C77C74 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B30582B55FCF600C77C74 /* HomeService.swift */; };
 		4B6106392B3E51EF007AE1EE /* MenuProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61062C2B3E51EF007AE1EE /* MenuProfileTableViewCell.swift */; };
@@ -24,7 +25,7 @@
 		4B8DB5D52B6D5363006B02ED /* InventoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DB5D42B6D5363006B02ED /* InventoryScreen.swift */; };
 		4B8DB5D72B6D536F006B02ED /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DB5D62B6D536F006B02ED /* InventoryVC.swift */; };
 		4B8DB5DC2B6D582E006B02ED /* InventoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DB5DB2B6D582E006B02ED /* InventoryViewModel.swift */; };
-		4B8DB5DF2B6D5858006B02ED /* SheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DB5DE2B6D5858006B02ED /* SheetModel.swift */; };
+		4B8DB5DF2B6D5858006B02ED /* InventoryItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DB5DE2B6D5858006B02ED /* InventoryItemModel.swift */; };
 		4B8DB5E22B6D5FD6006B02ED /* StockProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DB5E12B6D5FD6006B02ED /* StockProfileService.swift */; };
 		4B8DB5E42B6D6901006B02ED /* SheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DB5E32B6D6901006B02ED /* SheetViewModel.swift */; };
 		4B9684F52B5AD6450078A057 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9684F42B5AD6450078A057 /* FilterCollectionViewCell.swift */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		04455AB5087F445FEABC8308 /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
 		4B4307312B3BC5A500204FB1 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4B5819402B8D38C4004BF607 /* SheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModel.swift; sourceTree = "<group>"; };
 		4B5B30552B55EF5B00C77C74 /* UIColor + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		4B5B30572B55F83A00C77C74 /* HomeDataMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeDataMock.json; sourceTree = "<group>"; };
 		4B5B30582B55FCF600C77C74 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
@@ -79,7 +81,6 @@
 		4B6106362B3E51EF007AE1EE /* MenuScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
 		4B6106382B3E51EF007AE1EE /* MenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		4B6106412B3E5439007AE1EE /* MenuDataMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MenuDataMock.json; sourceTree = "<group>"; };
-		4B8398D52B6D6BBE00632F86 /* SheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModel.swift; sourceTree = "<group>"; };
 		4B8DB5C92B6BBC84006B02ED /* CRUDFormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDFormTableViewCell.swift; sourceTree = "<group>"; };
 		4B8DB5CB2B6BBCD8006B02ED /* CRUDFormTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDFormTableViewCellScreen.swift; sourceTree = "<group>"; };
 		4B8DB5D02B6BC5B4006B02ED /* SheetFormScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetFormScreen.swift; sourceTree = "<group>"; };
@@ -87,7 +88,7 @@
 		4B8DB5D42B6D5363006B02ED /* InventoryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryScreen.swift; sourceTree = "<group>"; };
 		4B8DB5D62B6D536F006B02ED /* InventoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		4B8DB5DB2B6D582E006B02ED /* InventoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewModel.swift; sourceTree = "<group>"; };
-		4B8DB5DE2B6D5858006B02ED /* SheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModel.swift; sourceTree = "<group>"; };
+		4B8DB5DE2B6D5858006B02ED /* InventoryItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemModel.swift; sourceTree = "<group>"; };
 		4B8DB5E12B6D5FD6006B02ED /* StockProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockProfileService.swift; sourceTree = "<group>"; };
 		4B8DB5E32B6D6901006B02ED /* SheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewModel.swift; sourceTree = "<group>"; };
 		4B9684F42B5AD6450078A057 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -320,7 +321,7 @@
 		4B8DB5DA2B6D5694006B02ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4B8398D52B6D6BBE00632F86 /* SheetModel.swift */,
+				4B5819402B8D38C4004BF607 /* SheetModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,7 +329,7 @@
 		4B8DB5DD2B6D5848006B02ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4B8DB5DE2B6D5858006B02ED /* SheetModel.swift */,
+				4B8DB5DE2B6D5858006B02ED /* InventoryItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -911,9 +912,10 @@
 				4BAB424E2B595DD20082A3F1 /* RequestScreen.swift in Sources */,
 				4B8DB5D52B6D5363006B02ED /* InventoryScreen.swift in Sources */,
 				4B61063A2B3E51EF007AE1EE /* MenuProfileTableViewCellScreen.swift in Sources */,
+				4B5819412B8D38C4004BF607 /* SheetModel.swift in Sources */,
 				4BD227222B3B7C1000CA52C6 /* Alert.swift in Sources */,
 				4B8DB5D32B6BC5DD006B02ED /* SheetFormVC.swift in Sources */,
-				4B8DB5DF2B6D5858006B02ED /* SheetModel.swift in Sources */,
+				4B8DB5DF2B6D5858006B02ED /* InventoryItemModel.swift in Sources */,
 				4BAB42462B5954410082A3F1 /* SearchVC.swift in Sources */,
 				4B9684F72B5AD65B0078A057 /* FilterCollectionViewCellScreen.swift in Sources */,
 				4B8DB5E42B6D6901006B02ED /* SheetViewModel.swift in Sources */,
