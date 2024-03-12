@@ -37,7 +37,7 @@ class MenuProfileViewModel {
                     self.delegate?.error(error?.localizedDescription ?? "")
                 }
             }
-        case .createCollection:
+        case .createNewCollection:
             return
         }
     }

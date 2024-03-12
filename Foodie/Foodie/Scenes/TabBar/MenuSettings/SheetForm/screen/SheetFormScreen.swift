@@ -9,6 +9,7 @@ import UIKit
 
 protocol SheetFormScreenProtocol: AnyObject {
     func actionRegisterButton()
+    //   var sendName: String { get set }
 }
 
 class SheetFormScreen: UIView {
@@ -19,14 +20,14 @@ class SheetFormScreen: UIView {
         self.delegate = delegate
     }
     
-    lazy var backGroundView: UIView = {
+    private lazy var backGroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .yellow//UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         return view
     }()
     
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Cadastro"
@@ -35,7 +36,7 @@ class SheetFormScreen: UIView {
         return label
     }()
     
-    lazy var itemImageView : UIImageView = {
+    private lazy var itemImageView : UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage( systemName: "plus.diamond.fill" )
@@ -44,7 +45,7 @@ class SheetFormScreen: UIView {
         return image
     }()
     
-    lazy var nameItemTextField: UITextField = {
+    private lazy var nameItemTextField: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.autocorrectionType = .no
@@ -59,7 +60,7 @@ class SheetFormScreen: UIView {
         return tf
     }()
     
-    lazy var descriptionTextField: UITextField = {
+    private lazy var descriptionTextField: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.placeholder = "descriçäo:"
@@ -73,7 +74,7 @@ class SheetFormScreen: UIView {
         return tf
     }()
     
-    lazy var priceTextField: UITextField = {
+    private lazy var priceTextField: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.placeholder = "valor:"
@@ -88,7 +89,7 @@ class SheetFormScreen: UIView {
         return tf
     }()
     
-    lazy var registerItemButton: UIButton = {
+    private lazy var registerItemButton: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.backgroundColor = .blue
@@ -103,6 +104,17 @@ class SheetFormScreen: UIView {
     
     @objc func tappedRegisterButton() {
         self.delegate?.actionRegisterButton()
+    }
+    
+    public func getName() -> String {
+        return nameItemTextField.text ?? ""
+    }
+    
+    public func getDescription() -> String {
+        return descriptionTextField.text ?? ""
+    }
+    public func getPrice() -> String {
+        return priceTextField.text ?? ""
     }
     
     func configTextFieldDelegate( delegate: UITextFieldDelegate){
@@ -120,6 +132,7 @@ class SheetFormScreen: UIView {
         backGroundView.addSubview(priceTextField)
         backGroundView.addSubview(registerItemButton)
     }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addViews()
@@ -129,25 +142,6 @@ class SheetFormScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    public func getName() -> String{
-        return self.nameItemTextField.text ?? ""
-    }
-    
-    public func getDescription() -> String {
-        return self.descriptionTextField.text ?? ""
-    }
-    public func getPrice() -> String {
-        return self.priceTextField.text ?? ""
-    }
-    
-    
-   // public func getImage() -> String{
-      //  return self.passwordTextField.text ?? ""
- //   }
-    
-    
     
     private func setupConstraints() {
         backGroundView.pin(to: self)

@@ -9,32 +9,29 @@ import UIKit
 import FirebaseFirestoreInternal
 
 class SheetFormVC: UIViewController {
-    
-    private let service = StockProfileService()
-    var screen: SheetFormScreen?
+    private var screen: SheetFormScreen?
     private var firestore:Firestore?
     private var viewModel = SheetViewModel()
+    
+ 
     
     override func loadView() {
         screen = SheetFormScreen()
         view = screen
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        dismissKeyboard()
-        screen?.delegate(delegate: self)
         screen?.configTextFieldDelegate(delegate: self)
+        screen?.delegate(delegate: self)
+        dismissKeyboard()
         firestore = Firestore.firestore()
     }
     
 
-
-
+    
 }
-
 extension SheetFormVC: UITextFieldDelegate {
-
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -42,11 +39,12 @@ extension SheetFormVC: UITextFieldDelegate {
 }
 
 extension SheetFormVC: SheetFormScreenProtocol {
-    func actionRegisterButton(){
-        guard let screen = self.screen else {return}
-        
-        viewModel.fetch(.createCollection)
-        
+    func actionRegisterButton(){ // passar dados para salvar aqui
+        viewModel.fetch(.createNewCollection(data: SheetModel(name: screen?.getName() ?? "", description: screen?.getDescription() ?? "", price: screen?.getPrice() ?? "")))
         self.dismiss(animated: true, completion: nil)
+        
     }
 }
+
+
+
